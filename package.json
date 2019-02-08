@@ -29,6 +29,7 @@
     "youtube-info": "^1.2.0",
     "zalgolize":"^1.2.4",
     "array-sort":"^1.0.0",
+    "table": "^5.2.2",
     "ytdl-core": "^0.20.3"
   },
   "engines": {
