@@ -126,4 +126,4 @@ if (message.content.startsWith(adminprefix + 'setava')) {
 });
 
 
-client.login("Bot_Token");
+client.login("BOT_TOKEN");
