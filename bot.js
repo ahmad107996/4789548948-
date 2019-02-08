@@ -1,41 +1,46 @@
-const Discord = require('discord.js');
+
+const Discord = require("discord.js");
 const client = new Discord.Client();
-const prefix = "البرفركس"
+var prefix = "W";
+const adminprefix = "!";
+const developers = ["529373130842701834"]//Toxic Codes
+client.on('message', message => {//Toxic Codes
+    var argresult = message.content.split(`).slice(1).join(' ');//Toxic Codes
+      if (!developers.includes(message.author.id)) return;
+     
+  if (message.content.startsWith(adminprefix + 'sp')) {
+    client.user.setGame(argresult);
+      message.channel.send(:white_check_mark:   ${argresult})
+  } else
+     if (message.content === (adminprefix + "leave")) {//Toxic Codes
+    message.guild.leave();   //Toxic Codes
+  } else  
+  if (message.content.startsWith(adminprefix + 'sw')) {
+  client.user.setActivity(argresult, {type:'WATCHING'});//Toxic Codes
+      message.channel.send(:white_check_mark:   ${argresult})//Toxic Codes
+  } else
+  if (message.content.startsWith(adminprefix + 'sl')) {
+  client.user.setActivity(argresult , {type:'LISTENING'});
+      message.channel.send(:white_check_mark:   ${argresult})//Toxic Codes
+  } else
+  if (message.content.startsWith(adminprefix + 'sets')) {
+    client.user.setGame(argresult, "https://www.twitch.tv/zero");
+      message.channel.send(:white_check_mark:)//Toxic Codes
+  }
+  if (message.content.startsWith(adminprefix + 'setname')) {
+  client.user.setUsername(argresult).then
+      message.channel.send(Changing The Name To ..${argresult} )
+} else
+  if (message.content.startsWith(adminprefix + 'setprefix')) {//Toxic Codes
+  client.user.setPrefix(argresult).then
+      message.channel.send(Changing Prefix ..${argresult} )//Toxic Codes
+} else
+if (message.content.startsWith(adminprefix + 'setavatar')) {//Toxic Codes
+  client.user.setAvatar(argresult);
+    message.channel.send(Changing The Avatar To :${argresult} `);//Toxic Codes
+}
+});//Toxic Codes
 
-client.on('ready', () => {
-console.log(`سجل الدخول ${client.user.tag}!`);
-console.log('')
-console.log('')
-console.log('╔[═════════════════════════════════════════════════════════════════]╗')
-console.log(`[Start] ${new Date()}`);
-console.log('╚[═════════════════════════════════════════════════════════════════]╝')
-console.log('')
-console.log('╔[════════════════════════════════════]╗');
-console.log(`تسجيل الدخول ل * [ " ${client.user.username} " ]`);
-console.log('')
-console.log('معلومات : ')
-console.log('')
-console.log(`عدد السيرفرات♤ [ " ${client.guilds.size} " ]`);
-console.log(`المستخدمين♡ [ " ${client.users.size} " ]`);
-console.log(`الرومات♧ [ " ${client.channels.size} " ]`);
-console.log('╚[════════════════════════════════════]╝')
-console.log('By Jackeo')
-console.log('╔[════════════]╗')
-console.log(' البوت اون لاين')
-console.log('╚[════════════]╝')
-console.log('V2 العربية arap ')
-console.log('Dev Narox by Jackeo')
 
 
-//النسخة المعربة من جاكيو 
-
-
-});
-
-//حط الاكواد تحت ↓↓↓
-
-
-
-//هنا التوكن اذا ما تبغا لهيروكو شيلprocess.env.BOT_TOKEN وحط توكنك بدالها 
-
-client.login(process.env.BOT_TOKEN);
+client.login(process.env.BOT_TOKEN);// لا تغير فيها شيء
