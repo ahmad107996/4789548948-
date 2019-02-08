@@ -2002,14 +2002,10 @@ if (message.content.startsWith(prefix + 'نقاطي')) {
   fs.writeFile("./json/awsmm.json", JSON.stringify(points), (err) => {
     if (err) console.error(err)
   })
-
-/*nickname*/
-//////////////////byfrasgamer
-
-  client.on("message",  message => {
+client.on("message",  message => {
          let args = message.content.split(' ').slice(1);
-    if(message.content.startsWith(prefix + 'nickname')) {
-        if (!message.member.hasPermission("MANAGE_NICKNAMES")) {
+  if(message.content.startsWith(prefix + 'nickname')) {
+  if (!message.member.hasPermission("MANAGE_NICKNAMES")) return message.reply("**You Need ``MANAGE_NICKNAME`` | :x:**")
             message.channel.send("حط الاسم")
         } else {
             if (!message.guild.member(client.user).hasPermission('MANAGE_NICKNAMES')) return message.reply(' :x:البوت ما عنده خاصية MANAGE_NICKNAMES.').catch(console.error);
@@ -2019,9 +2015,9 @@ if (message.content.startsWith(prefix + 'نقاطي')) {
             if (message.mentions.users.size < 1) return message.author.send('You must mention a user to change their nickname. :x:').catch(console.error);
             message.guild.member(changenick.id).setNickname(username);
             message.channel.send("تم تغيير الاسم الى: " + changenick + "")
-        }
-    }});
-    
+                        }
+                    })
+                })
  ////////////////////////////////////////////////byfrasgamer
 
 
