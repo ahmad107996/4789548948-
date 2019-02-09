@@ -1956,8 +1956,7 @@ google({ query: input, disableConsole: true }).then(results => {
 ///////////////////////////////////byfrasgamer
 
 /*awsm*/
-let points = JSON.parse(fs.readFileSync('../json/awsm.json', 'utf8'));
-client.on('message', message => {
+let points = JSON.parse(fs.readFileSync('../awsm.json', 'utf8'));
 if (!points[message.author.id]) points[message.author.id] = {
 	points: 0,
   };
