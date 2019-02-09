@@ -1964,7 +1964,7 @@ if (!points[message.author.id]) points[message.author.id] = {
 if (message.content.startsWith(prefix + 'عواصم')) {
 	if(!message.channel.guild) return
 
-const type = require('../json/awsm.json');
+const type = require('../awsm.json');
 const item = type[Math.floor(Math.random() * type.length)];
 const filter = response => {
     return item.answers.some(answer => answer.toLowerCase() === response.content.toLowerCase());
